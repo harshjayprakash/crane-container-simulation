@@ -64,7 +64,11 @@ function Drop(
 
 ```sh
 # Compiling the program.
-fpc problem.pas
+fpc Problem.pas
 # Running the program.
-./problem
+./Problem
 ```
+
+Below shows the program output.
+
+![Screenshot](./doc/ccs-screenshot.PNG)
