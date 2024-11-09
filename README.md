@@ -33,8 +33,31 @@ state. This program was create to help out with working out heuristics and the t
 cost, manually using the A* algorithm.
 
 ```pas
+// Example:
 // Increase the Total Cost based on the crane moving from loading bay D to loading bay C.
 Inc(TotalCost^, Move(Crane^, LoadingBayD^, LoadingBayC^));
+
+
+// All functions available to use
+// The returning Integer is the cost so it can be used in the increment function with
+// the total cost.
+// Inc(TotalCost^, { function here });
+
+(* Moves the crane from and to the specified bays. *)
+function Move(
+    var Crane: TCrane; 
+    LoadingBayFrom, LoadingBayTo: TLoadingBay): Integer;
+
+(* Crane picks up the top container from the loading bay *)
+function PickUp(
+    var Crane: TCrane; var LoadingBay: TLoadingBay;
+    var Containers: array of TContainer): Integer;
+
+(* Drops the container the crane is holding *)
+function Drop(
+    var Crane: TCrane; var LoadingBay: TLoadingBay;
+    var Containers: array of TContainer): Integer;
+
 ```
 
 ## Quick Start
