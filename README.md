@@ -8,7 +8,7 @@ The "Crane Container Simulation" is a terminal application used to aid in the ca
 of heuristics and cost. The goal was to find the shortest possible path to reach the goal
 state from the initial state, as per the requirement from the module BS2200 Artificial
 Intelligence at the University of Winchester. The Original Hand In Date was Tuesday,
-10th of January 2023.
+10th of January 2023. **No further development will be pursued.**
 
 ## Contextual Information
 
