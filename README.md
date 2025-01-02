@@ -1,6 +1,6 @@
 # Crane Container Simulation (CCS)
 
-![Banner (Decorative)](./doc/banner.png)
+![Banner (Decorative)](./doc/ccs-banner.png)
 
 ## Overview
 
