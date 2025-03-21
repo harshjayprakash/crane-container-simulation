@@ -110,7 +110,8 @@ begin
 end;
 
 procedure Path(
-    var Paths: array of TPath; var PathCount: Integer; LoadingBayFrom, LoadingBayTo: TLoadingBay);
+    var Paths: array of TPath; var PathCount: Integer; 
+    LoadingBayFrom, LoadingBayTo: TLoadingBay);
 begin
     Paths[PathCount].LFrom := LoadingBayFrom.Identifer;
     Paths[PathCount].LTo := LoadingBayTo.Identifer;
@@ -167,8 +168,7 @@ begin
     if Crane.AtBay <> LoadingBay.Identifer then exit;
     if Crane.Holding = 0 then exit;
     if LoadingBay.ContainerCount = 3 then exit;
-    Containers[Crane.Holding-1].BayPosition := TStackPosition(
-        LoadingBay.ContainerCount);
+    Containers[Crane.Holding-1].BayPosition := TStackPosition(LoadingBay.ContainerCount);
     Containers[Crane.Holding-1].PickUpByCrane := False;
     Containers[Crane.Holding-1].InBay := LoadingBay.Identifer;
     LoadingBay.Stack[LoadingBay.ContainerCount] := Crane.Holding;
@@ -177,7 +177,7 @@ begin
     Drop := DropCost();
 end;
 
-function HeurBayDistance(Bay: Char; ContainerInBay: Char): INteger;
+function HeurBayDistance(Bay: Char; ContainerInBay: Char): Integer;
 begin
     HeurBayDistance := Abs(3 * (Ord(Bay) - Ord(ContainerInBay)));
 end;
@@ -190,8 +190,7 @@ begin
     if Container.InBay = Bay then
     begin
         if Container.BayPosition = Position then exit;
-        Inc(HeurIndexDistance, Abs(
-            Integer(Container.BayPosition) - Integer(Position)));
+        Inc(HeurIndexDistance, Abs(Integer(Container.BayPosition) - Integer(Position)));
     end
     else if Container.InBay = '0' then
     begin
@@ -365,7 +364,7 @@ begin
 
     // Displaying Graphic.
     DisplayGraphic(Env);
-    
+
     // Goal State Check.
     // Container 1 @ Loading Bay A @ Bottom;
     // Container 2 @ Loading Bay A @ Middle;
@@ -390,9 +389,11 @@ begin
             (Container5^.InBay = LoadingBayB^.Identifer) and 
             (Container5^.BayPosition = TStackPosition.Middle));
     except
-        on E: EAssertionFailed do begin
+        on E: EAssertionFailed do 
+        begin
             WriteLn(StdErr, 'Goal state has not been met.');
-            ErrorOcurred := True; end;
+            ErrorOcurred := True; 
+        end;
     end;
 
     if not ErrorOcurred then WriteLn('Goal state has been met.')
