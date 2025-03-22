@@ -1,6 +1,6 @@
 # Crane Container Simulation (CCS)
 
-![Banner (Decorative)](./doc/ccs-banner.png)
+![Banner (Decorative)](./doc/ccs-banner-raster.png)
 
 ## Overview
 
@@ -24,7 +24,7 @@ the container (Bottom (0), Middle (1), Top (2)).
 Below shows the initial state of the dock and the goal state that must be reached within
 minimum time.
 
-![Initial State](./doc/ccs-context.png)
+![Initial State and Goal State](./doc/ccs-context-raster.png)
 
 ## Usage by Editing Code
 
@@ -71,4 +71,5 @@ fpc Problem.pas
 
 Below shows the program output.
 
-![Screenshot](./doc/ccs-screenshot.PNG)
+![Screenshot of Program Compiled and Executed](./doc/ccs-screenshot.PNG)
+
