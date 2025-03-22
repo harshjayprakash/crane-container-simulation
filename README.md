@@ -76,3 +76,6 @@ Below shows the program output.
 
 ![Screenshot of Program Compiled and Executed](./doc/ccs-screenshot.PNG)
 
+## References
+
+* Free Pascal Compiler: <https://www.freepascal.org/>
