@@ -62,8 +62,11 @@ function Drop(
 
 ## Quick Start
 
+There is no makefile or build system since the program is a single file. No external
+dependencies are required - only standard library is used.
+
 ```sh
-# Compiling the program.
+# Compiling the program (Free Pascal Compiler must be in PATH).
 fpc Problem.pas
 # Running the program.
 ./Problem
