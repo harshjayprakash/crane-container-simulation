@@ -1,0 +1,6 @@
+# Ignore Object Files
+*.o
+
+# Ignore Output
+*.exe
+Problem
