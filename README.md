@@ -43,17 +43,17 @@ Inc(TotalCost^, Move(Crane^, LoadingBayD^, LoadingBayC^));
 // the total cost.
 // Inc(TotalCost^, { function here });
 
-(* Moves the crane from and to the specified bays. *)
+{ Moves the crane from and to the specified bays. }
 function Move(
     var Crane: TCrane; 
     LoadingBayFrom, LoadingBayTo: TLoadingBay): Integer;
 
-(* Crane picks up the top container from the loading bay *)
+{ Crane picks up the top container from the loading bay }
 function PickUp(
     var Crane: TCrane; var LoadingBay: TLoadingBay;
     var Containers: array of TContainer): Integer;
 
-(* Drops the container the crane is holding *)
+{ Drops the container the crane is holding }
 function Drop(
     var Crane: TCrane; var LoadingBay: TLoadingBay;
     var Containers: array of TContainer): Integer;
