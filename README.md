@@ -28,9 +28,9 @@ minimum time.
 
 ## Usage by Editing Code
 
-From Line 334, it shows that operations I took to reach the goal state from the initial
-state. This program was create to help out with working out heuristics and the total path
-cost, manually using the A* algorithm.
+From Line 548 (the comment that says "Plan" in the main section), it shows that operations
+I took to reach the goal state from the initial state. This program was create to help out
+with working out heuristics and the total path cost, manually using the A* algorithm.
 
 ```pas
 // Example:
