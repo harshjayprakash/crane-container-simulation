@@ -1,8 +1,13 @@
 # Crane Container Simulation (CCS)
 
-![Banner (Decorative)](./doc/ccs-banner-raster.png)
-
 ## Overview
+
+<p align="center">
+  <img 
+    src="./doc/assets/ccs-screenshot-raster.png" 
+    alt="A terminal with the program output"
+  />
+</p>
 
 The "Crane Container Simulation" is a terminal application used to aid in the calculation
 of heuristics and cost. The goal was to find the shortest possible path to reach the goal
@@ -24,7 +29,12 @@ the container (Bottom (0), Middle (1), Top (2)).
 Below shows the initial state of the dock and the goal state that must be reached within
 minimum time.
 
-![Initial State and Goal State](./doc/ccs-context-raster.png)
+<p align="center">
+  <img 
+    src="./doc/assets/ccs-context-raster.png" 
+    alt="Initial State and Goal State"
+  />
+</p>
 
 ## Usage by Editing Code
 
@@ -36,7 +46,6 @@ with working out heuristics and the total path cost, manually using the A* algor
 // Example:
 // Increase the Total Cost based on the crane moving from loading bay D to loading bay C.
 Inc(TotalCost^, Move(Crane^, LoadingBayD^, LoadingBayC^));
-
 
 // All functions available to use
 // The returning Integer is the cost so it can be used in the increment function with
@@ -71,10 +80,6 @@ fpc Problem.pas
 # Running the program.
 ./Problem
 ```
-
-Below shows the program output.
-
-![Screenshot of Program Compiled and Executed](./doc/ccs-screenshot.PNG)
 
 ## References
 
