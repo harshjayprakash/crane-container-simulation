@@ -4,3 +4,6 @@
 # Ignore Output
 *.exe
 Problem
+
+# Ignore Subversion
+.svn
